@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>ULatina | Universidad Latina de Costa Rica</title>
+    <link rel="shortcut icon" href="" type="image/png" />
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+
+<body>
+    <div class="nav-side-menu">
+        <div class="brand"><img src="" class="logo"></div>
+        <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+
+        <div class="menu-list">
+
+            <ul id="menu-content" class="menu-content collapse out">
+                <li>
+                    <a href="#">
+                  <i class="fa fa-dashboard fa-lg"></i> Principal
+                  </a>
+                </li>
+
+                <li data-toggle="collapse" data-target="#products" class="collapsed ">
+                    <a href="#"><i class="fa fa-pencil fa-lg"></i>Registro Usuarios </a>
+                </li>
+
+                <li data-toggle="collapse" data-target="#service" class="collapsed ">
+                    <a href="#"><i class="fa fa-globe fa-lg"></i> Registro de Objetos Perdidos </a>
+                </li>
+
+
+                <li data-toggle="collapse" data-target="#new" class="collapsed ">
+                    <a href="#"><i class="fa fa-search fa-lg"></i> Entrega de objetos Perdidos </a>
+                </li>
+                <li data-toggle="collapse" data-target="#new" class="collapsed active">
+                    <a href="#"><i class="fa fa-list fa-lg"></i> Lista de objetos Perdidos </a>
+                </li>
+
+
+                <li>
+                    <a href="#">
+                  <i class="fa fa-user fa-lg"></i> Mi Perfil
+                  </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                  <i class="fa fa-users fa-lg"></i> Lista de usuarios
+                  </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="tableContainer">
+        <h1>Lista de Objetos Perdidos</h1>
+        <table class="table table-responsive table-hover table-striped table-bordered">
+            <tr>
+                <th>Número</th>
+                <th>Descripción</th>
+                <th>Marca</th>
+                <th>Fecha de entrega</th>
+                <th>Entregado por</th>
+                <th>Estado</th>
+                <th>Entregar</th>
+            </tr>
+            <tr>
+                <td>001</td>
+                <td>Billetera roja de Star Wars</td>
+                <td>Billabong</td>
+                <td>6/8/2017</td>
+                <td>Johana Cedeño</td>
+                <td>En custodia</td>
+                <td><a><i class="fa fa-gift fa-lg" aria-hidden="true"></a></i></td>
+                
+            </tr>
+            <tr>
+                <td>002</td>
+                <td>Celular blanco</td>
+                <td>Iphone</td>
+                <td>8/8/2017</td>
+                <td>Andrés Ramirez</td>
+                <td>Entregado</td>
+                <td><a><i class="fa fa-gift fa-lg" aria-hidden="true"></a></i></td>
+            </tr>
+
+        </table>
+    </div>
+
+</body>
+
+</html>

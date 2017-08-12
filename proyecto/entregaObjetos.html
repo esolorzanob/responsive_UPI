@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+     <title>ULatina | Universidad Latina de Costa Rica</title>
+     <link rel="shortcut icon" href="" type="image/png" />
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+
+<body>
+    <div class="nav-side-menu">
+        <div class="brand"><img src="" class="logo"></div>
+        <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+
+        <div class="menu-list">
+
+            <ul id="menu-content" class="menu-content collapse out">
+                <li>
+                    <a href="#">
+                  <i class="fa fa-dashboard fa-lg"></i> Principal
+                  </a>
+                </li>
+
+                <li data-toggle="collapse" data-target="#products" class="collapsed ">
+                    <a href="#"><i class="fa fa-pencil fa-lg"></i>Registro Usuarios </a>
+                </li>
+               
+                <li data-toggle="collapse" data-target="#service" class="collapsed ">
+                    <a href="#"><i class="fa fa-globe fa-lg"></i> Registro de Objetos Perdidos </a>
+                </li>
+              
+
+                <li data-toggle="collapse" data-target="#new" class="collapsed active">
+                    <a href="#"><i class="fa fa-search fa-lg"></i> Entrega de objetos Perdidos </a>
+                </li>
+              <li data-toggle="collapse" data-target="#new" class="collapsed">
+                    <a href="#"><i class="fa fa-list fa-lg"></i> Lista de objetos Perdidos </a>
+                </li>
+
+
+                <li>
+                    <a href="#">
+                  <i class="fa fa-user fa-lg"></i> Mi Perfil
+                  </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                  <i class="fa fa-users fa-lg"></i> Lista de usuarios
+                  </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="formContainer">
+    <h1>Entrega de Objetos Perdidos</h1>
+    <form>
+         <div class="form-group">
+            <label for="email">Objeto Número:</label>
+            <input type="email" class="form-control" id="email">
+        </div>
+        <div class="form-group">
+            <label for="email">Nombre de persona a la que se le entrega:</label>
+            <input type="email" class="form-control" id="email">
+        </div>
+         <div class="form-group">
+            <label for="email">Fecha de entrega:</label>
+            <input type="date" class="form-control" id="email">
+        </div>
+        <div class="form-group">
+            <label for="email">Cédula de la persona a la que se le entrega:</label>
+            <input type="text" class="form-control" id="email">
+        </div>
+        <div class="form-group">
+            <label for="pwd">Email:</label>
+            <input type="text" class="form-control" id="pwd">
+        </div>
+        <div class="form-group">
+            <label for="pwd">Teléfono:</label>
+            <input type="text" class="form-control" id="pwd">
+        </div>
+        
+        <button type="submit" class="btn btn-default">Entregar</button>
+    </form>
+    </div>
+   
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+#menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #085906;
+    height: 100%;
+    color: white;
+    padding-right: 3%;
+}
+.titulo{
+    margin-left: 20%;
+    margin-bottom: 30%;
+}
+
+.navegacion ul {
+   list-style-type: none;
+}
+.navegacion ul li{
+    margin-bottom: 20%;
+    padding: 10px;
+ }
+ .navegacion ul li:hover{
+    background-color: #119b0d;
+ }
+ #formularioContainer{
+     margin-top: 50px;
+     margin-left: 20%;
+     width: 70%;
+ }
+ .fila{
+     display: inline-block;
+     margin-bottom: 15px;
+ }
+ .columna {
+     display: inline-table;
+     margin-left: 20px;
+ }
+ .columna label{
+     display: block;
+     width: 70px;
+     float: left;
+ }
+ 
+ @media (max-width: 970px) {
+    .columna{
+        margin-bottom: 10px;
+    }
+    .fila{
+        margin-bottom: 10px;
+    }
+    #formularioContainer{
+        margin-left: 40%;
+    }
+}    
+@media (max-width: 590px) {
+    .columna{
+       
+       margin-bottom: 10px;
+    }
+    .fila{
+       
+       margin-bottom: 10px;
+    }
+    #formularioContainer{
+        margin-left: 40%;
+    }
+    .columna label{
+        
+        width: 70px;
+    }
+
+}    
