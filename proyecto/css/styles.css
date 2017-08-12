@@ -121,7 +121,7 @@ body {
 }
 
 .logo{
-    width: 90%;
+    width: 100%;
 }
 .tableContainer{
     margin-right: 20%;
@@ -129,7 +129,9 @@ body {
     margin-top: 5%;
     width: 50%;
 }
-
+#titulo{
+  margin-bottom: 12%;
+}
 @media (max-width: 767px) {
   .nav-side-menu {
     position: relative;
