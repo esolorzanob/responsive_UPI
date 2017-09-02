@@ -1,3 +1,20 @@
+
+.rojo{
+  color: red;
+}
+.verde{
+  color:green;
+}
+.botonTabla{
+  text-align: center;
+}
+
+.formContainerPrincipal{
+  margin-left:  250px;
+  margin-right: 250px;
+  margin-top: 80px;
+  width: 600px;
+}
 .nav-side-menu {
   overflow: auto;
   font-family: verdana;
@@ -16,6 +33,7 @@
   display: block;
   text-align: center;
   font-size: 14px;
+  height: 100px;
 }
 .nav-side-menu .toggle-btn {
   display: none;
@@ -127,11 +145,16 @@ body {
     margin-right: 20%;
     margin-left: 30%;
     margin-top: 5%;
-    width: 50%;
+    width: 65%;
 }
 #titulo{
   margin-bottom: 12%;
 }
+
+.escondida{
+  display: none;
+}
+
 @media (max-width: 767px) {
   .nav-side-menu {
     position: relative;
@@ -166,27 +189,20 @@ body {
     margin-top: 6%;
     width: 60%;
 }
-.tableContainer{
-    margin-right: 20%;
-    margin-left: 10%;
-    margin-top: 5%;
-    width: 80%;
-}
+
 
 }
+
 @media (min-width: 767px) {
   .nav-side-menu .menu-list .menu-content {
     display: block;
   }
-  .logo{
-    width: 60%;
-}
+  
 .formContainer{
     margin-right: 20%;
     margin-left: 40%;
     margin-top: 6%;
     width: 40%;
 }
-
-
 }
+

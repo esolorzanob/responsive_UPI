@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Proyecto</title>
+    <link rel="shortcut icon" type="image/x-icon" href="http://www.upi.ac.cr/wp-content/uploads/favicon.jpg" />
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/usuario_controller.js"></script>
+    <script src="js/principal.js"></script>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+
+<body>
+    <div class="nav-side-menu">
+        <div class="brand"><img src="imgs/upi2.jpg" class="logo"></div>
+        <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+
+        <div class="menu-list escondida" id="menuAdmin">
+
+            <ul id="menu-content" class="menu-content collapse out">
+                <li class="active">
+                    <a href="#">
+                  <i class="fa fa-dashboard fa-lg"></i> Principal
+                  </a>
+                </li>
+
+                <li data-toggle="collapse" data-target="#usuarios" class="collapsed">
+                    <a href="#"><i class="fa fa-users fa-lg"></i> Usuarios </a>
+                </li>
+                <ul class="sub-menu collapse" id="usuarios">
+                    <li><a href="registroUsuario.html">Registrar Usuario</a></li>
+                    <li><a href="listaUsuarios.html">Listar Usuario</a></li>
+                </ul>
+
+                <li data-toggle="collapse" class="collapsed">
+                    <a href="#"><i class="fa fa-car fa-lg"></i> Espacios de Parqueo </a>
+                </li>
+
+
+                <li data-toggle="collapse" data-target="#new" class="collapsed ">
+                    <a href="#"><i class="fa fa-map-pin fa-lg"></i> Areas de Parqueo </a>
+                </li>
+                <li data-toggle="collapse" data-target="#new" class="collapsed">
+                    <a href="#"><i class="fa fa-clock-o fa-lg"></i> Horarios </a>
+                </li>
+
+
+                <li>
+                    <a href="#">
+                  <i class="fa fa-user fa-lg"></i> Mi Perfil
+                  </a>
+                </li>
+
+                <li>
+                    <a href="javascript:void(0)" onclick="salir()">
+                  <i class="fa fa-sign-out fa-lg"></i> Salir
+                  </a>
+                </li>
+            </ul>
+        </div>
+        <div class="menu-list escondida" id="menuUsuario">
+            
+                        <ul id="menu-content" class="menu-content collapse out">
+                            <li class="active">
+                                <a href="principal.html">
+                              <i class="fa fa-dashboard fa-lg"></i> Principal
+                              </a>
+                            </li>
+                            <li class="">
+                                <a href="principal.html">
+                              <i class="fa fa-car fa-lg"></i> Solicitar Parqueo
+                              </a>
+                            </li>
+                            <li>
+                                <a href="editarUsuario.html">
+                              <i class="fa fa-user fa-lg"></i> Mi Perfil
+                              </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" onclick="salir()">
+                              <i class="fa fa-sign-out fa-lg"></i> Salir
+                              </a>
+                            </li>
+                        </ul>
+                    </div>
+    </div>
+
+  
+</body>
+
+</html>
