@@ -1,7 +1,7 @@
 <?php
 $username = "root";
 $password = "";
-$servername = "172.16.11.129";
+$servername = "127.0.0.1";
 $dbname = "test";
 $conn = new mysqli($servername, $username, $password, $dbname);
 if($_POST["metodo"] == "select"){

@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/usuario_controller.js"></script>
-    <script src="js/principal.js"></script>
+    <script src="js/areas_controller.js"></script>
+    <script src="js/listaAreas.js"></script>
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/bootstrap.css">
 </head>
@@ -22,7 +22,7 @@
         <div class="menu-list escondida" id="menuAdmin">
 
             <ul id="menu-content" class="menu-content collapse out">
-                <li class="active">
+                <li>
                     <a href="#">
                   <i class="fa fa-dashboard fa-lg"></i> Principal
                   </a>
@@ -33,26 +33,21 @@
                 </li>
                 <ul class="sub-menu collapse" id="usuarios">
                     <li><a href="registroUsuario.html">Registrar Usuario</a></li>
-                    <li><a href="listaUsuarios.html">Listar Usuario</a></li>
+                    <li class=""><a href="listaUsuarios.html">Listar Usuario</a></li>
                 </ul>
 
-                <li data-toggle="collapse" data-target="#parqueos" class="collapsed">
+                <li data-toggle="collapse" class="collapsed">
                     <a href="#"><i class="fa fa-car fa-lg"></i> Espacios de Parqueo </a>
                 </li>
-                <ul class="sub-menu collapse" id="parqueos">
-                    <li class=""><a href="registroParqueo.html">Registrar Parqueo</a></li>
-                    <li class=""><a href="listaParqueos.html">Listar Parqueos</a></li>
-                </ul>
 
 
                 <li data-toggle="collapse" data-target="#areas" class="collapsed ">
                     <a href="#"><i class="fa fa-map-pin fa-lg"></i> Areas de Parqueo </a>
                 </li>
-                <ul class="sub-menu collapse" id="areas">
+                <ul class="sub-menu" id="areas">
                     <li><a href="registroArea.html">Registrar Area</a></li>
-                    <li><a href="listaAreas.html">Listar Areas</a></li>
+                    <li class="active"><a href="listaAreas.html">Listar Areas</a></li>
                 </ul>
-
                 <li data-toggle="collapse" data-target="#new" class="collapsed">
                     <a href="#"><i class="fa fa-clock-o fa-lg"></i> Horarios </a>
                 </li>
@@ -85,7 +80,7 @@
                               </a>
                 </li>
                 <li>
-                    <a href="editarUsuario.html">
+                    <a href="#">
                               <i class="fa fa-user fa-lg"></i> Mi Perfil
                               </a>
                 </li>
@@ -98,6 +93,17 @@
         </div>
     </div>
 
+    <div class="tableContainer">
+        <h1>Lista de Areas</h1>
+        <table id="listaArea" class="table table-responsive 
+    table-hover table-bordered table-striped">
+            <tr>
+                <th>Nombre</th>
+                <th>Editar</th>
+                <th>Borrar</th>
+            </tr>
+        </table>
+    </div>
 
 </body>
 
