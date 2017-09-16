@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/usuario_controller.js"></script>
-    <script src="js/listaUsuarios.js"></script>
+    <script src="js/horarios_controller.js"></script>
+    <script src="js/listaHorarios.js"></script>
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/bootstrap.css">
 </head>
@@ -22,7 +22,7 @@
         <div class="menu-list escondida" id="menuAdmin">
 
             <ul id="menu-content" class="menu-content collapse out">
-                <li >
+                <li>
                     <a href="principal.html">
                   <i class="fa fa-dashboard fa-lg"></i> Principal
                   </a>
@@ -31,9 +31,9 @@
                 <li data-toggle="collapse" data-target="#usuarios" class="collapsed">
                     <a href="#"><i class="fa fa-users fa-lg"></i> Usuarios </a>
                 </li>
-                <ul class="sub-menu" id="usuarios">
+                <ul class="sub-menu collapse" id="usuarios">
                     <li><a href="registroUsuario.html">Registrar Usuario</a></li>
-                    <li class="active"><a href="listaUsuarios.html">Listar Usuario</a></li>
+                    <li class=""><a href="listaUsuarios.html">Listar Usuario</a></li>
                 </ul>
 
                 <li data-toggle="collapse" data-target="#parqueos" class="collapsed">
@@ -45,21 +45,20 @@
                     </ul>
 
 
-                <li data-toggle="collapse" data-target="#areas" class="collapsed">
+                <li data-toggle="collapse" data-target="#areas" class="collapsed ">
                     <a href="#"><i class="fa fa-map-pin fa-lg"></i> Areas de Parqueo </a>
                 </li>
                 <ul class="sub-menu collapse" id="areas">
-                    <li class=""><a href="registroArea.html">Registrar Area</a></li>
-                    <li><a href="listaAreas.html">Listar Areas</a></li>
+                    <li><a href="registroArea.html">Registrar Area</a></li>
+                    <li class=""><a href="listaAreas.html">Listar Areas</a></li>
                 </ul>
                 <li data-toggle="collapse" data-target="#horarios" class="collapsed">
                     <a href="#"><i class="fa fa-clock-o fa-lg"></i> Horarios </a>
                 </li>
-                <ul class="sub-menu collapse" id="horarios">
+                <ul class="sub-menu" id="horarios">
                     <li class=""><a href="registroHorario.html">Registrar Horario</a></li>
-                    <li class=""><a href="listaHorarios.html">Listar Horarios</a></li>
+                    <li class="active"><a href="listaHorarios.html">Listar Horarios</a></li>
                 </ul>
-
 
                 <li>
                     <a href="javascript:void(0)" onclick="salir()">
@@ -69,42 +68,38 @@
             </ul>
         </div>
         <div class="menu-list escondida" id="menuUsuario">
-            
-                        <ul id="menu-content" class="menu-content collapse out">
-                            <li class="active">
-                                <a href="principal.html">
+
+            <ul id="menu-content" class="menu-content collapse out">
+                <li class="active">
+                    <a href="principal.html">
                               <i class="fa fa-dashboard fa-lg"></i> Principal
                               </a>
-                            </li>
-                            <li class="">
-                                <a href="principal.html">
+                </li>
+                <li class="">
+                    <a href="principal.html">
                               <i class="fa fa-car fa-lg"></i> Solicitar Parqueo
                               </a>
-                            </li>
-                            <li>
-                                <a href="#">
+                </li>
+                <li>
+                    <a href="#">
                               <i class="fa fa-user fa-lg"></i> Mi Perfil
                               </a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)" onclick="salir()">
+                </li>
+                <li>
+                    <a href="javascript:void(0)" onclick="salir()">
                               <i class="fa fa-sign-out fa-lg"></i> Salir
                               </a>
-                            </li>
-                        </ul>
-                    </div>
+                </li>
+            </ul>
+        </div>
     </div>
 
     <div class="tableContainer">
-        <table id="listaUsuario" class="table table-responsive 
+        <h1>Lista de Horarios</h1>
+        <table id="listaHorarios" class="table table-responsive 
     table-hover table-bordered table-striped">
             <tr>
                 <th>Nombre</th>
-                <th>Apellidos</th>
-                <th>Correo</th>
-                <th>Telefono</th>
-                <th>Provincia</th>
-                <th>Genero</th>
                 <th>Editar</th>
                 <th>Borrar</th>
             </tr>

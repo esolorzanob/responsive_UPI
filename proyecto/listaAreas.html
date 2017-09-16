@@ -23,7 +23,7 @@
 
             <ul id="menu-content" class="menu-content collapse out">
                 <li>
-                    <a href="#">
+                    <a href="principal.html">
                   <i class="fa fa-dashboard fa-lg"></i> Principal
                   </a>
                 </li>
@@ -36,9 +36,13 @@
                     <li class=""><a href="listaUsuarios.html">Listar Usuario</a></li>
                 </ul>
 
-                <li data-toggle="collapse" class="collapsed">
+                <li data-toggle="collapse" data-target="#parqueos" class="collapsed">
                     <a href="#"><i class="fa fa-car fa-lg"></i> Espacios de Parqueo </a>
                 </li>
+                <ul class="sub-menu collapse" id="parqueos">
+                        <li class=""><a href="registroParqueo.html">Registrar Parqueo</a></li>
+                        <li class=""><a href="listaParqueos.html">Listar Parqueos</a></li>
+                    </ul>
 
 
                 <li data-toggle="collapse" data-target="#areas" class="collapsed ">
@@ -48,16 +52,13 @@
                     <li><a href="registroArea.html">Registrar Area</a></li>
                     <li class="active"><a href="listaAreas.html">Listar Areas</a></li>
                 </ul>
-                <li data-toggle="collapse" data-target="#new" class="collapsed">
+                <li data-toggle="collapse" data-target="#horarios" class="collapsed">
                     <a href="#"><i class="fa fa-clock-o fa-lg"></i> Horarios </a>
                 </li>
-
-
-                <li>
-                    <a href="#">
-                  <i class="fa fa-user fa-lg"></i> Mi Perfil
-                  </a>
-                </li>
+                <ul class="sub-menu collapse" id="horarios">
+                    <li class=""><a href="registroHorario.html">Registrar Horario</a></li>
+                    <li class=""><a href="listaHorarios.html">Listar Horarios</a></li>
+                </ul>
 
                 <li>
                     <a href="javascript:void(0)" onclick="salir()">

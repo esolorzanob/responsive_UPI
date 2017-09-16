@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/usuario_controller.js"></script>
-    <script src="js/registroUsuario.js"></script>
+    <script src="js/horarios_controller.js"></script>
+    <script src="js/registroHorario.js"></script>
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/bootstrap.css">
 </head>
@@ -31,8 +31,8 @@
                 <li data-toggle="collapse" data-target="#usuarios" class="collapsed">
                     <a href="#"><i class="fa fa-users fa-lg"></i> Usuarios </a>
                 </li>
-                <ul class="sub-menu " id="usuarios">
-                    <li class="active"><a href="registroUsuario.html">Registrar Usuario</a></li>
+                <ul class="sub-menu collapse" id="usuarios">
+                    <li class=""><a href="registroUsuario.html">Registrar Usuario</a></li>
                     <li><a href="listaUsuarios.html">Listar Usuario</a></li>
                 </ul>
 
@@ -46,24 +46,19 @@
 
 
                 <li data-toggle="collapse" data-target="#areas" class="collapsed">
-                    <a href="#"><i class="fa fa-map-pin fa-lg"></i> Areas de Parqueo </a>
-                </li>
-                <ul class="sub-menu collapse" id="areas">
-                    <li class=""><a href="registroArea.html">Registrar Area</a></li>
-                    <li><a href="listaAreas.html">Listar Areas</a></li>
-                </ul>
-                
+                        <a href="#"><i class="fa fa-map-pin fa-lg"></i> Areas de Parqueo </a>
+                    </li>
+                    <ul class="sub-menu collapse" id="areas">
+                        <li class=""><a href="registroArea.html">Registrar Area</a></li>
+                        <li class=""><a href="listaAreas.html">Listar Areas</a></li>
+                    </ul>
                 <li data-toggle="collapse" data-target="#horarios" class="collapsed">
                     <a href="#"><i class="fa fa-clock-o fa-lg"></i> Horarios </a>
                 </li>
-                <ul class="sub-menu collapse" id="horarios">
-                    <li class=""><a href="registroHorario.html">Registrar Horario</a></li>
+                <ul class="sub-menu" id="horarios">
+                    <li class="active"><a href="registroHorario.html">Registrar Horario</a></li>
                     <li class=""><a href="listaHorarios.html">Listar Horarios</a></li>
                 </ul>
-                
-
-
-               
 
                 <li>
                     <a href="javascript:void(0)" onclick="salir()">
@@ -100,48 +95,11 @@
     </div>
 
     <div class="formContainer">
-        <h1 id="titulo">Registro usuarios</h1>
-        <form onsubmit="return registrar()">
+        <h1 id="titulo">Registro Horario</h1>
+        <form onsubmit="return registrarHorario()">
             <div class="form-group">
                 <label for="username">Nombre:</label>
                 <input type="text" class="form-control" id="nombre" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Apellidos:</label>
-                <input type="text" class="form-control" id="apellidos" required>
-            </div>
-            <div class="form-group">
-                <label for="username">Teléfono:</label>
-                <input type="text" class="form-control" id="telefono" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Correo:</label>
-                <input type="email" class="form-control" id="correo" required>
-            </div>
-            <div class="form-group">
-                <label for="username">Username:</label>
-                <input type="text" class="form-control" id="username" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="password" class="form-control" id="password" required>
-            </div>
-            <div class="form-group">
-                <label for="username">Provincia:</label>
-                <select id="provincia">
-                    <option value="San Jose">San José</option>
-                    <option value="Limon">Limón</option>
-                    <option value="Alajuela">Alajuela</option>
-                    <option value="Cartago">Cartago</option>
-                    <option value="Heredia">Heredia</option>
-                    <option value="Guanacaste">Guanacaste</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="password">Género:</label>
-                <input type="radio" name="gen" value="Masculino">Masculino
-                <input type="radio" name="gen" value="Femenino">Femenino
-                <input type="radio" name="gen" value="No Responde">No Responde
             </div>
 
             <button type="submit" class="btn btn-default">Registrar</button>

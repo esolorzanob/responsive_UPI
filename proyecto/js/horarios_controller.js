@@ -1,51 +1,51 @@
 
 
-function registrarArea() {
-    var area = {
+function registrarHorario() {
+    var horario = {
         metodo: "insert",
         nombre: $('#nombre').val(),
     }
     $.ajax({
-        url: "../php/areas.php",
+        url: "../php/horario.php",
         method: "POST",
-        data: area,
+        data: horario,
         error: function (xhr) {
             console.log(xhr.statusText);
         },
-        success: function (area_response) {
-                if (area_response == "Exito") {
-                    $('#mensaje').text("Area registrada con éxito!");
+        success: function (horario_response) {
+                if (horario_response == "Exito") {
+                    $('#mensaje').text("Horario registrada con éxito!");
                 } else {
-                    $('#mensaje').text("Error al registrar area");
+                    $('#mensaje').text("Error al registrar horario");
                 }
             }
     });
     return false;
 }
 
-function listarAreas() {
-    var area = {
+function listarHorarios() {
+    var horario = {
         metodo: "selectAll",
     }
     $.ajax({
-        url: "../php/areas.php",
+        url: "../php/horario.php",
         method: "POST",
-        data: area,
+        data: horario,
         error: function (xhr) {
             console.log(xhr.statusText);
         },
-        success: function (area_response) {
-            var areas = JSON.parse(area_response);
-            areas.map(function (area) {
+        success: function (horario_response) {
+            var horarios = JSON.parse(horario_response);
+            horarios.map(function (horario) {
                 var fila = document.createElement("tr");
                 //nombre
                 var nombre = document.createElement("td");
-                $(nombre).text(area.nombre);
+                $(nombre).text(horario.nombre);
                 $(fila).append(nombre);
                 
                 //editar
                 var editar = document.createElement("td");
-                $(editar).html("<a href=\"editarAreas.html?" + area.idareas + "\"><i class=\"fa fa-lg fa-pencil-square-o verde\" aria-hidden=\"true\"></i></a>");
+                $(editar).html("<a href=\"editarHorarios.html?" + horario.idhorarios + "\"><i class=\"fa fa-lg fa-pencil-square-o verde\" aria-hidden=\"true\"></i></a>");
                 $(editar).addClass("botonTabla");
                 $(fila).append(editar);
                 //borrar
@@ -54,53 +54,53 @@ function listarAreas() {
                 $(borrar).addClass("botonTabla");
                 $(fila).append(borrar);
                 //pegar la fila a la tabla
-                $('#listaArea').append(fila);
+                $('#listaHorarios').append(fila);
             });
         }
     });
     return false;
 }
 
-function traerID(idArea) {
-    var area = {
+function traerID(idHorario) {
+    var horario = {
         metodo: "selectID",
-        idareas: idArea
+        idhorarios: idHorario
     }
     $.ajax({
-        url: "../php/areas.php",
+        url: "../php/horario.php",
         method: "POST",
-        data: area,
+        data: horario,
         error: function (xhr) {
             console.log(xhr.statusText);
         },
-        success: function (area_response) {
-            var area = JSON.parse(area_response);
-            $('#nombre').val(area.nombre);
-            $('#idareas').val(area.idareas);
+        success: function (horario_response) {
+            var horario = JSON.parse(horario_response);
+            $('#nombre').val(horario.nombre);
+            $('#idhorarios').val(horario.idhorarios);
         }
     });
     return false;
 }
 
 function editar() {
-    var area = {
+    var horario = {
         metodo: "update",
         nombre: $('#nombre').val(),
-        idareas: $('#idareas').val()
+        idhorarios: $('#idhorarios').val()
     }
    
     $.ajax({
-        url: "../php/areas.php",
+        url: "../php/horario.php",
         method: "POST",
-        data: area,
+        data: horario,
         error: function (xhr) {
             console.log(xhr.statusText);
         },
-        success: function (area_response) {
-            if (area_response == "Exito") {
-                $('#mensaje').text("Area editada con éxito!");
+        success: function (horario_response) {
+            if (horario_response == "Exito") {
+                $('#mensaje').text("horario editada con éxito!");
             } else {
-                $('#mensaje').text("Error al editar area");
+                $('#mensaje').text("Error al editar horario");
             }
         }
     });
