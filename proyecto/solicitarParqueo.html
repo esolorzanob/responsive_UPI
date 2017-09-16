@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Proyecto</title>
+    <link rel="shortcut icon" type="image/x-icon" href="http://www.upi.ac.cr/wp-content/uploads/favicon.jpg" />
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/solicitarParqueo_controller.js"></script>
+    <script src="js/solicitarParqueo.js"></script>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+
+<body>
+    <div class="nav-side-menu">
+        <div class="brand"><img src="imgs/upi2.jpg" class="logo"></div>
+        <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+
+        <div class="menu-list escondida" id="menuAdmin">
+
+            <ul id="menu-content" class="menu-content collapse out">
+                <li >
+                    <a href="principal.html">
+                  <i class="fa fa-dashboard fa-lg"></i> Principal
+                  </a>
+                </li>
+
+                <li data-toggle="collapse" data-target="#usuarios" class="collapsed">
+                    <a href="#"><i class="fa fa-users fa-lg"></i> Usuarios </a>
+                </li>
+                <ul class="sub-menu collapse" id="usuarios">
+                    <li class=""><a href="registroUsuario.html">Registrar Usuario</a></li>
+                    <li><a href="listaUsuarios.html">Listar Usuario</a></li>
+                </ul>
+
+                <li data-toggle="collapse" data-target="#parqueos" class="collapsed">
+                    <a href="#"><i class="fa fa-car fa-lg"></i> Espacios de Parqueo </a>
+                </li>
+                <ul class="sub-menu collapse" id="parqueos">
+                        <li class=""><a href="registroParqueo.html">Registrar Parqueo</a></li>
+                        <li class=""><a href="listaParqueos.html">Listar Parqueos</a></li>
+                    </ul>
+
+
+                <li data-toggle="collapse" data-target="#areas" class="collapsed">
+                        <a href="#"><i class="fa fa-map-pin fa-lg"></i> Areas de Parqueo </a>
+                    </li>
+                    <ul class="sub-menu" id="areas">
+                        <li class="active"><a href="registroArea.html">Registrar Area</a></li>
+                        <li class=""><a href="listaAreas.html">Listar Areas</a></li>
+                    </ul>
+                    <li data-toggle="collapse" data-target="#horarios" class="collapsed">
+                        <a href="#"><i class="fa fa-clock-o fa-lg"></i> Horarios </a>
+                    </li>
+                    <ul class="sub-menu collapse" id="horarios">
+                        <li class=""><a href="registroHorario.html">Registrar Horario</a></li>
+                        <li class=""><a href="listaHorarios.html">Listar Horarios</a></li>
+                    </ul>
+
+
+                <li>
+                    <a href="javascript:void(0)" onclick="salir()">
+                  <i class="fa fa-sign-out fa-lg"></i> Salir
+                  </a>
+                </li>
+            </ul>
+        </div>
+        <div class="menu-list escondida" id="menuUsuario">
+            
+                        <ul id="menu-content" class="menu-content collapse out">
+                            <li class="active">
+                                <a href="principal.html">
+                              <i class="fa fa-dashboard fa-lg"></i> Principal
+                              </a>
+                            </li>
+                            <li class="">
+                                <a href="principal.html">
+                              <i class="fa fa-car fa-lg"></i> Solicitar Parqueo
+                              </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                              <i class="fa fa-user fa-lg"></i> Mi Perfil
+                              </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)" onclick="salir()">
+                              <i class="fa fa-sign-out fa-lg"></i> Salir
+                              </a>
+                            </li>
+                        </ul>
+                    </div>
+    </div>
+
+    <div class="formContainer">
+        <h1 id="titulo">Solicitar Parqueo</h1>
+        <form onsubmit="return solicitarParqueo()">
+            <div class="form-group">
+                <label for="username">Fecha:</label>
+                <input type="date" class="form-control" id="fecha" required>
+            </div>
+            <div class="form-group">
+                <label for="username">Turno:</label>
+                <select id="turnos">
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-default">Solicitar</button>
+        </form>
+        <p id="mensaje"></p>
+    </div>
+
+</body>
+
+</html>
