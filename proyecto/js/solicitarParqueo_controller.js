@@ -13,7 +13,8 @@ function listarTurnos() {
         success: function (horario_response) {
             var horarios = JSON.parse(horario_response);
             horarios.map(function (horario) {
-                $('<option>').val(horario.idhorarios).text(horario.nombre).appendTo('#turnos');
+                $('<option>').val(horario.idhorarios).text(horario.nombre)
+                .appendTo('#turnos');
             });
         }
     });
@@ -43,11 +44,9 @@ function solicitarParqueo() {
             var parqueosOcupados = master[1];
             var bandera = true;
             var contador = 0;
-            
             while(bandera){
                 var ocupado = false;
                 parqueosOcupados.map(function(e){
-                    console.log(parqueos[contador].idparqueos + " " + e.idparqueos );
                     if(parqueos[contador].idparqueos == e.idparqueos){
                        ocupado = true;
                     }
