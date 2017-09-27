@@ -14,7 +14,7 @@ function listarTurnos() {
             var horarios = JSON.parse(horario_response);
             horarios.map(function (horario) {
                 $('<option>').val(horario.idhorarios).text(horario.nombre)
-                .appendTo('#turnos');
+                    .appendTo('#turnos');
             });
         }
     });
@@ -22,48 +22,72 @@ function listarTurnos() {
 }
 
 function solicitarParqueo() {
-    var usuario = JSON.parse(sessionStorage.getItem('usuarioLogueado'));
-    var parqueo = {
-        metodo: "solicitar",
-        fecha: $('#fecha').val(),
-        turno: $('#turnos').val(),
-        usuario: usuario.idusuarios,
-        area: usuario.rol
-    }
-    
-    $.ajax({
-        url: "../php/solicitarParqueos.php",
-        method: "POST",
-        data: parqueo,
-        error: function (xhr) {
-            console.log(xhr.statusText);
-        },
-        success: function (solicitar_response) {
-            var master = JSON.parse(solicitar_response);
-            var parqueos = master[0];
-            var parqueosOcupados = master[1];
-            var bandera = true;
-            var contador = 0;
-            while(bandera){
-                var ocupado = false;
-                parqueosOcupados.map(function(e){
-                    if(parqueos[contador].idparqueos == e.idparqueos){
-                       ocupado = true;
+
+    if (new Date($('#fecha').val().replace(/\-/g, ",")) > new Date()) {
+        var usuario = JSON.parse(sessionStorage.getItem('usuarioLogueado'));
+        var parqueo = {
+            metodo: "solicitar",
+            fecha: $('#fecha').val(),
+            turno: $('#turnos').val(),
+            usuario: usuario.idusuarios,
+            area: usuario.rol
+        }
+
+        $.ajax({
+            url: "../php/solicitarParqueos.php",
+            method: "POST",
+            data: parqueo,
+            error: function (xhr) {
+                console.log(xhr.statusText);
+            },
+            success: function (solicitar_response) {
+                var master = JSON.parse(solicitar_response);
+                var parqueos = master[0];
+                var parqueosOcupados = master[1];
+                var bandera = true;
+                var contador = 0;
+                while (bandera) {
+                    var ocupado = false;
+                    parqueosOcupados.map(function (e) {
+                        if (parqueos[contador].idparqueos == e.idparqueos) {
+                            ocupado = true;
+                        }
+                    });
+                    if (ocupado) {
+                        if (contador < parqueos.length) {
+                            contador++;
+                        } else {
+                            alert('todo ocupado');
+                        }
+                    } else {
+                        parqueo.metodo = "insert";
+                        parqueo.idparqueos = parqueos[contador].idparqueos;
+                        $.ajax({
+                            url: "../php/solicitarParqueos.php",
+                            method: "POST",
+                            data: parqueo,
+                            error: function (xhr) {
+                                console.log(xhr.statusText);
+                            },
+                            success: function (solicitar_response) {
+                                if (solicitar_response == "Exito") {
+                                    $('#mensaje').text("Parqueo asignado con éxito, su parqueo es el número " +
+                                        parqueos[contador].numero);
+                                }else{
+                                    $('#mensaje').text("Error al asignar parqueo");
+                                }
+                            }
+                        });
+
+                        bandera = false;
                     }
-                });
-                if(ocupado){
-                    if(contador < parqueos.length){
-                        contador++;
-                    }else{
-                        alert('todo ocupado');
-                    }  
-                }else{
-                    alert("Espacio Vacio" + parqueos[contador].numero);
-                    bandera = false;
                 }
             }
-        }
-    });
+        });
+    } else {
+        alert("La fecha de la solicitud no puede ser hoy ni fechas anteriores");
+    }
+
     return false;
 }
 

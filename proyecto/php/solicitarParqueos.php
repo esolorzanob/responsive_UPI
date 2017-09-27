@@ -51,9 +51,13 @@ if($_POST["metodo"] == "select"){
     echo json_encode($master);
 }else{
     if($_POST["metodo"] == "insert"){
-        $sql = "insert into parqueos (numero, areas_idAreas) values ('"
-        .$_POST["numero"]."',"
-        .$_POST["area"].")";
+        $sql = "insert into parqueoLibre (idusuarios, idparqueos,idhorarios,
+        idareas, fecha) values ("
+        .$_POST["usuario"].","
+        .$_POST["idparqueos"].","
+        .$_POST["turno"].","
+        .$_POST["area"].",'"
+        .$_POST["fecha"]."')";
     }else if($_POST["metodo"] == "update"){
         $sql = "update parqueos set 
         numero='".$_POST["numero"]."',
